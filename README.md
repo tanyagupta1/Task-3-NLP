@@ -21,3 +21,8 @@ I train the model to predict the category using the training data and test its a
 The model training is done using the count vectorizer, which uses the bag of words technique to find the frequency of occurrence of several words across descriptions.
 I use the Multinomial Naive Bytes Algorithm and provide it with the countvectorizer  obtained and the associated descriptions.
 I use the trained model so obtained to predict the categories of the remaining 20% of the dataset and the accuracy obtained is **93.77%** 
+
+### Notes and Observations:
+1. I used the count vectorizer instead of the tf_idf vectorizer, as the classes in the dataset are skewed, as discussed in the visualization section. Tf_idf is better to use when the data is almost equally distributed among all classes. I tried using tf_idf vectorizer, and obtained a reduced accuracy of 86.33%
+2. We can try lemmatization instead of stemming the words:
+Using that I get an accuracy of 93.69%, which hardly differs from the accuracy obtained using stemming.
